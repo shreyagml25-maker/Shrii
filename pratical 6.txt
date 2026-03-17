@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scholarship / Seminar Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        form {
+            width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        fieldset {
+            margin-bottom: 15px;
+            border: 2px solid #4CAF50;
+        }
+        legend {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        label {
+            display: block;
+            margin-top: 8px;
+        }
+        input, select {
+            width: 100%;
+            padding: 6px;
+            margin-top: 4px;
+        }
+        .inline {
+            width: auto;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <!-- Personal Details -->
+    <fieldset>
+        <legend>Personal Information</legend>
+
+        <label>Full Name:</label>
+        <input type="text" name="name" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Phone Number:</label>
+        <input type="tel" name="phone">
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male" class="inline"> Male
+        <input type="radio" name="gender" value="female" class="inline"> Female
+        <input type="radio" name="gender" value="other" class="inline"> Other
+    </fieldset>
+
+    <!-- Academic Details -->
+    <fieldset>
+        <legend>Academic Details</legend>
+
+        <label>Course:</label>
+        <select name="course">
+            <option value="">--Select Course--</option>
+            <option>B.Tech</option>
+            <option>M.Tech</option>
+            <option>B.Sc</option>
+            <option>MBA</option>
+        </select>
+
+        <label>Year of Study:</label>
+        <select name="year">
+            <option>1st Year</option>
+            <option>2nd Year</option>
+            <option>3rd Year</option>
+            <option>4th Year</option>
+        </select>
+    </fieldset>
+
+    <!-- Seminar Selection -->
+    <fieldset>
+        <legend>Seminar / Scholarship Details</legend>
+
+        <label>Select Seminar Topics:</label>
+        <input type="checkbox" name="topic" value="AI" class="inline"> Artificial Intelligence<br>
+        <input type="checkbox" name="topic" value="ML" class="inline"> Machine Learning<br>
+        <input type="checkbox" name="topic" value="Cyber" class="inline"> Cyber Security<br>
+
+        <label>Applying For:</label>
+        <input type="radio" name="type" value="seminar" class="inline"> Seminar
+        <input type="radio" name="type" value="scholarship" class="inline"> Scholarship
+    </fieldset>
+
+    <button type="submit">Register</button>
+</form>
+
+</body>
+</html>
