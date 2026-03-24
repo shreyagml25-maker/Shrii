@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+
+<style>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Gradient */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    text-align: center;
+    color: white;
+}
+
+/* Title */
+h1 {
+    margin: 20px;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Card */
+.card {
+    width: 250px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+/* Image */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.card:hover img {
+    transform: scale(1.2);
+}
+
+/* Gradient Overlay */
+.card::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>My Image Gallery</h1>
+
+<div class="gallery">
+    <div class="card">
+        <img src="https://picsum.photos/id/1015/400/300" alt="Image 1">
+    </div>
+    <div class="card">
+        <img src="https://picsum.photos/id/1016/400/300" alt="Image 2">
+    </div>
+    <div class="card">
+        <img src="https://picsum.photos/id/1018/400/300" alt="Image 3">
+    </div>
+    <div class="card">
+        <img src="https://picsum.photos/id/1020/400/300" alt="Image 4">
+    </div>
+</div>
+
+</body>
+</html>
