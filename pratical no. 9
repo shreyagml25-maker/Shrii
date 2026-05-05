@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive CSS3 Webpage</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<!-- Icons (Font Awesome) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5f5;
+}
+
+/* Navbar */
+nav {
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Multi-column section */
+.multi-column {
+    column-count: 3;
+    column-gap: 20px;
+    padding: 20px;
+}
+
+/* Cards */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    
+    /* Transition */
+    transition: transform 0.4s, background 0.4s;
+}
+
+/* Transform + Hover Effect */
+.card:hover {
+    transform: scale(1.1) rotate(3deg);
+    background: #e0f7fa;
+}
+
+/* Icons */
+.card i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.card {
+    animation: fadeIn 1s ease-in;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .multi-column {
+        column-count: 1;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>My Responsive Website</h2>
+</nav>
+
+<header>
+    <h1>Welcome!</h1>
+    <p>Using CSS3 Features like Animation, Columns, and Transformations</p>
+</header>
+
+<section class="multi-column">
+    <p>
+        This is a multi-column layout created using CSS3. It automatically adjusts 
+        content into multiple columns. This helps in better readability and design.
+    </p>
+    <p>
+        CSS3 provides powerful features like animations, transitions, and responsive 
+        design tools that make websites interactive and modern.
+    </p>
+    <p>
+        You can resize the screen to see how this layout adapts to different devices.
+    </p>
+</section>
+
+<section class="container">
+
+    <div class="card">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Web Development</h3>
+        <p>Learn HTML, CSS, and JavaScript easily.</p>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Responsive Design</h3>
+        <p>Works on mobile, tablet, and desktop.</p>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-rocket"></i>
+        <h3>Fast Performance</h3>
+        <p>Optimized with modern CSS features.</p>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 My Website | Designed with CSS3</p>
+</footer>
+
+</body>
+</html>
